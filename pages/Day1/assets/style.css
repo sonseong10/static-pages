@@ -1,0 +1,6 @@
+/* Custon Grid System */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 960px !important;
+  }
+}
