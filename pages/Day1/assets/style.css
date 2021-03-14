@@ -209,6 +209,35 @@ body {
   width: 290px;
   height: 299px;
 }
+/* curriculm */
+.curriculum .row:first-child {
+  margin-bottom: 48px;
+}
+
+.curriculum .row:last-child .col-12:first-child {
+  margin-bottom: 40px;
+}
+
+.curriculum .section-category {
+  color: #0189d1;
+}
+
+.curriculum-img {
+  display: none;
+}
+
+.curriculum .section-desc {
+  margin-bottom: 32px;
+}
+
+.curriculum-detail-desc {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.466666666666667;
+  letter-spacing: -0.01em;
+  color: #2b292d;
+}
+
 /* Custon Grid System */
 @media screen and (min-width: 1200px) {
   .container {
