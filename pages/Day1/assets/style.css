@@ -298,6 +298,26 @@ body {
   text-decoration: underline;
 }
 
+/* footer */
+footer {
+  padding: 24px 0;
+}
+
+.footer-link {
+  margin-bottom: 8px;
+}
+
+.footer-link:last-child {
+  margin-bottom: 0;
+}
+
+.footer-link a {
+  font-size: 14px;
+  line-height: 1.714285714285714;
+  letter-spacing: -0.01em;
+  color: #807f81;
+}
+
 /* Custon Grid System */
 @media screen and (min-width: 1200px) {
   .container {
