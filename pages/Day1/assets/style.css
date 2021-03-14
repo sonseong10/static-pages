@@ -49,6 +49,68 @@ body {
   background-color: #66666652;
 }
 
+/* landing */
+.landing {
+  background-color: #fdded8;
+  text-align: center;
+}
+
+.landing_height {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lending-title {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #2b292d;
+  margin-bottom: 24px;
+}
+
+.landing-desc {
+  margin-bottom: 24px;
+}
+
+.landing .button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing .button-group .fill-button:first-child {
+  margin-right: 8px;
+}
+
+.fill-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 140px;
+  height: 48px;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+  border-radius: 2px;
+  background-color: #3040c4;
+  color: #ffffff;
+  transition: box-shadow 300ms ease-in-out;
+}
+
+.fill-button.inverted {
+  background-color: #fff;
+  color: #3040c4;
+}
+
+.fill-button:hover {
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
 /* Custon Grid System */
 @media screen and (min-width: 1200px) {
   .container {
