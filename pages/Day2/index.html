@@ -21,17 +21,17 @@
       <div class="gnb-wrapper">
         <nav class="gnb">
           <ul>
-            <li class="gnb-item">
-              <a href="#">Home</a>
+            <li>
+              <a href="#" class="gnb-item">Home</a>
             </li>
-            <li class="gnb-item">
-              <a href="#">About</a>
+            <li>
+              <a href="#" class="gnb-item">About</a>
             </li>
-            <li class="gnb-item">
-              <a href="#">Blog</a>
+            <li>
+              <a href="#" class="gnb-item">Blog</a>
             </li>
-            <li class="gnb-item">
-              <a href="#">Contact</a>
+            <li>
+              <a href="#" class="gnb-item">Contact</a>
             </li>
           </ul>
         </nav>
@@ -40,6 +40,11 @@
           <button type="button" class="btn">Sign up</button>
         </div>
       </div>
+      <button type="button" class="moblie-hamburger-btn" data-value="moblieBtn">
+        <span class="horizontal"></span>
+        <span class="horizontal"></span>
+        <span class="horizontal"></span>
+      </button>
     </header>
     <section>
       <div>
@@ -58,5 +63,30 @@
         <div></div>
       </div>
     </section>
+    <script type="text/javascript">
+      const body = document.body
+      const moblieBtn = document.querySelectorAll(".horizontal")
+      const gnbList = document.querySelector(".gnb-wrapper")
+
+      body.addEventListener("click", (event) => {
+        event.target.dataset.value === "moblieBtn"
+          ? handleToggle()
+          : handleBlur()
+      })
+
+      function handleToggle() {
+        gnbList.classList.toggle("active")
+        moblieBtn.forEach((item) => {
+          item.classList.toggle("cross")
+        })
+      }
+
+      function handleBlur() {
+        gnbList.classList.remove("active")
+        moblieBtn.forEach((item) => {
+          item.classList.remove("cross")
+        })
+      }
+    </script>
   </body>
 </html>

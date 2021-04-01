@@ -12,6 +12,9 @@
   --font-small: 2rem;
   --font-mid: 3rem;
   --font-lage: 7.2rem;
+
+  /* transition */
+  --transition-base: all 0.4s;
 }
 
 ::selection {
@@ -42,19 +45,11 @@ li {
   list-style: none;
 }
 
-.btn {
-  padding: 18px 31px;
-  border-radius: 6px;
-  background-color: transparent;
-  font-size: var(--font-base);
+button {
   border: none;
+  background-color: transparent;
   outline: none;
   cursor: pointer;
-}
-
-.btn:hover {
-  background-color: var(--color-purple);
-  color: var(--color-white);
 }
 
 a,
@@ -63,69 +58,122 @@ a:visited {
   text-decoration: none;
 }
 
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 /* header */
 header {
+  position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 3em 8em;
+  padding: 12px 16px;
+  background-color: var(--color-white);
+  z-index: 11;
 }
 
 .logo {
   display: flex;
-  margin-right: 3.8em;
-  font-size: var(--font-mid);
-}
-
-.decoration {
-  color: var(--color-purple);
+  font-size: var(--font-small);
 }
 
 .gnb-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   width: 100%;
+  max-height: 0;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-base);
 }
 
-.gnb > ul {
-  display: flex;
+.gnb-wrapper.active {
+  top: 48px;
+  max-height: none;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.gnb {
+  width: 100%;
+  text-align: center;
 }
 
 .gnb-item {
-  position: relative;
-  font-size: var(--font-base);
-  padding: 8px;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.gnb-item:not(:last-child) {
-  margin-right: 38px;
-}
-
-.gnb-item:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
   display: block;
-  border-radius: 10px;
-  width: 100%;
-  height: 2px;
-  background-color: #824ff1;
-  opacity: 0;
-  transform: translateX(-100%);
+  padding: 8px 0;
+  font-size: var(--font-base);
+  transition: var(--transition-base);
+}
+
+.gnb-item:hover {
+  border-radius: 6px;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.logo .decoration {
+  color: var(--color-purple);
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: var(--font-base);
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  color: var(--color-purple-dark);
   transition: all 0.4s;
 }
 
-.gnb-item:hover:after {
-  opacity: 1;
-  transform: none;
+.btn:hover,
+.btn.active {
+  background-color: var(--color-purple);
+  color: var(--color-white);
 }
 
-.btn-wrapper button:not(:last-child) {
-  margin-right: 6px;
+.moblie-hamburger-btn {
+  padding: 8px;
+  width: 36px;
+  height: 36px;
 }
+
+.moblie-hamburger-btn .horizontal {
+  display: block;
+  margin-top: 4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-purple-dark);
+  transition: var(--transition-base);
+}
+
+.moblie-hamburger-btn .horizontal:first-child.cross {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.moblie-hamburger-btn .horizontal:nth-child(2).cross {
+  opacity: 0;
+}
+
+.moblie-hamburger-btn .horizontal:last-child.cross {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.moblie-hamburger-btn:hover .horizontal {
+  background-color: var(--color-purple);
+}
+
 .title {
   font-family: "Ramaraja", serif;
 }
