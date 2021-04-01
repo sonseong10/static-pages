@@ -20,6 +20,10 @@
 }
 
 /* reset css */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -51,4 +55,7 @@ a,
 a:visited {
   color: var(--color-purple-dark);
   text-decoration: none;
+}
+.title {
+  font-family: "Ramaraja", serif;
 }
