@@ -1,0 +1,54 @@
+/* global */
+:root {
+  /* color */
+  --color-black: #000000;
+  --color-white: #fff;
+  --color-gray: #9a9a9a;
+  --color-purple: #824ff1;
+  --color-purple-dark: #1b0a42;
+
+  /* font size */
+  --font-base: 1.6rem;
+  --font-small: 2rem;
+  --font-mid: 3rem;
+  --font-lage: 7.2rem;
+}
+
+::selection {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+/* reset css */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  padding-left: 0;
+  list-style: none;
+}
+
+button[type="button"] {
+  padding: 18px 31px;
+  border-radius: 6px;
+  background-color: transparent;
+  font-size: var(--font-base);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a,
+a:visited {
+  color: var(--color-purple-dark);
+  text-decoration: none;
+}
