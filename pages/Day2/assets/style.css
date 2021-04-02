@@ -110,16 +110,32 @@ header {
 }
 
 .gnb-item {
+  position: relative;
   display: block;
   padding: 8px 0;
   font-size: var(--font-base);
   transition: var(--transition-base);
+  overflow: hidden;
 }
 
-.gnb-item:hover {
+.gnb-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
   border-radius: 6px;
   background-color: var(--color-purple);
-  color: var(--color-white);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: var(--transition-base);
+}
+
+.gnb-item:hover::before {
+  opacity: 1;
+  transform: none;
 }
 
 .logo .decoration {
@@ -137,10 +153,18 @@ header {
   transition: all 0.4s;
 }
 
+.btn-wrapper .btn:not(:last-child) {
+  margin-right: 6px;
+}
+
 .btn:hover,
 .btn.active {
   background-color: var(--color-purple);
   color: var(--color-white);
+}
+
+.btn.active:hover {
+  box-shadow: 2px 2px 6px rgba(24, 24, 24, 0.5);
 }
 
 .moblie-hamburger-btn {
@@ -186,7 +210,7 @@ header {
 
 /* container-left */
 .container-left {
-  flex-basis: 50%;
+  flex-basis: 100%;
 }
 
 .intro {
@@ -212,6 +236,4 @@ header {
 /* container right */
 .container-right {
   display: none;
-}
-
 }
