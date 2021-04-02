@@ -1,0 +1,124 @@
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    max-width: 720px;
+  }
+
+  .container-left {
+    flex-basis: 50%;
+  }
+
+  .container-right {
+    position: relative;
+    display: block;
+    flex-basis: 50%;
+    margin-bottom: 50px;
+    width: 50%;
+  }
+
+  .layer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+  }
+
+  .layer1 {
+    background-image: url("./img/layer1.png");
+  }
+
+  .layer2 {
+    background-image: url("./img/layer2.png");
+    z-index: 1;
+  }
+
+  .layer3 {
+    background-image: url("./img/layer3.png");
+    transform: translate(-50%, -6%);
+  }
+
+  .layer4 {
+    background-image: url("./img/layer4.svg");
+    animation: ease-in-out 3s infinite alternate bounce;
+  }
+
+  @keyframes bounce {
+    from {
+      transform: translate(-50%, -20%) scale(0);
+    }
+    to {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .logo {
+    margin-right: 5.8em;
+  }
+
+  .gnb-wrapper {
+    position: static;
+    flex-direction: row;
+    opacity: 1;
+    max-height: none;
+    pointer-events: all;
+    justify-content: space-between;
+    transition: var(--transition-base);
+  }
+
+  .gnb {
+    width: auto;
+  }
+
+  .gnb > ul {
+    display: flex;
+    text-align: center;
+  }
+
+  .btn-wrapper {
+    display: flex;
+  }
+
+  .gnb-item {
+    display: block;
+    padding: 8px 0;
+    font-size: var(--font-base);
+    transition: var(--transition-base);
+  }
+
+  .gnb:not(:last-child) .gnb-item {
+    margin-right: 2.6em;
+  }
+
+  .moblie-hamburger-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+    max-width: 1140px;
+  }
+  .intro {
+    text-align: left;
+  }
+  .container-right {
+    height: 60%;
+  }
+}
