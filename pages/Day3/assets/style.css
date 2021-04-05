@@ -1,0 +1,164 @@
+* {
+  font-family: "Press Start 2P", cursive;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #111111;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+h1 {
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  align-items: center;
+  text-transform: uppercase;
+  animation: move 2s infinite linear paused;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+li:last-child .card {
+  margin-bottom: 0;
+}
+
+.card:hover {
+  animation-play-state: running;
+}
+
+.card:hover.bg-red {
+  box-shadow: 0 0 14px #ff4949;
+}
+
+.card:hover.bg-yellow {
+  box-shadow: 0 0 14px #ffc92c;
+}
+
+.card:hover.bg-blue {
+  box-shadow: 0 0 14px #0066ff;
+}
+
+.bg-red {
+  background-color: #ff4949;
+  background-image: url("./images/mario_bg.png");
+}
+
+.bg-yellow {
+  background-color: #ffc92c;
+  background-image: url("./images/donkeykong_bg.png");
+}
+
+.bg-blue {
+  background-color: #0066ff;
+  background-image: url("./images/sonic_bg.png");
+}
+
+.img-size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.img-size .character {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.character-name {
+  color: #fff;
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  ul {
+    display: flex;
+  }
+
+  .warp {
+    transform: skewY(3deg);
+  }
+
+  .container {
+    height: 100vh;
+  }
+
+  .card {
+    position: relative;
+  }
+
+  .img-size character {
+    transform: scale(0.6);
+  }
+
+  .card:hover .img-size .mario {
+    transform: translate(-20%, -20%);
+  }
+
+  .card:hover .img-size .donkeykong {
+    transform: scale(1.6);
+  }
+
+  .card:hover .img-size .sonic {
+    transform: translate(20%, -50%);
+  }
+
+  .btn-area {
+    flex-direction: row;
+  }
+
+  .btn-area character {
+    margin-right: 20px;
+  }
+
+  .btn-area button {
+    margin: 0;
+  }
+
+  .card:hover .character-name {
+    font-size: 28px;
+  }
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200px 200px;
+  }
+}
