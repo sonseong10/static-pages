@@ -1,0 +1,112 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  left: 0;
+  top: -1000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -100;
+  pointer-events: none;
+}
+
+.game-box {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* mario */
+
+.game-box.game1 {
+  background-image: url("./images/mario_map.png");
+}
+
+.mario {
+  position: absolute;
+  left: 320px;
+  bottom: 68px;
+  width: 240px;
+  height: 256px;
+  background: url("../assets/images/sprite3.png");
+  animation: play-m 1s steps(5) infinite;
+}
+
+@keyframes play-m {
+  100% {
+    background-position: -1280px;
+  }
+}
+
+/* donkeykong */
+
+.game-box.game2 {
+  background-image: url("./images/donkeykong_map.png");
+}
+
+.donkeykong {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 200px;
+  height: 140px;
+  background: url("./images/sprite.png");
+  animation: play-d 1s steps(2) infinite;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes play-d {
+  100% {
+    background-position: -420px;
+  }
+}
+
+/* sonic */
+
+.game-box.game3 {
+  background-image: url("./images/sonic_map.png");
+}
+
+.sonic {
+  position: absolute;
+  right: 120px;
+  bottom: 160px;
+  width: 84px;
+  height: 100px;
+  background: url("./images/sprite2.png");
+  animation: play-s 1s steps(36) infinite;
+  background-size: cover;
+}
+
+@keyframes play-s {
+  100% {
+    background-position: -3600px;
+  }
+}
