@@ -1,12 +1,24 @@
+:root {
+  --color-red: #ff4949;
+  --color-blue: #0066ff;
+  --color-yellow: #ffc92c;
+  --color-charcoal: #111;
+  --color-white: #fff;
+}
+
 * {
   font-family: "Press Start 2P", cursive;
   outline: none;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
-  background-color: #111111;
+  background-color: var(--color-charcoal);
 }
 
 ul {
@@ -16,8 +28,8 @@ ul {
 }
 
 h1 {
-  font-size: 22px;
-  color: #fff;
+  font-size: 2.2rem;
+  color: var(--color-white);
   text-align: center;
 }
 
@@ -30,17 +42,22 @@ h1 {
 
 .card {
   position: relative;
-  width: 300px;
-  height: 400px;
+  margin-bottom: 32px;
+  width: 30em;
+  height: 40em;
   align-items: center;
   text-transform: uppercase;
   animation: move 2s infinite linear paused;
-  margin-bottom: 32px;
   cursor: pointer;
 }
 
-li:last-child .card {
-  margin-bottom: 0;
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200px 200px;
+  }
 }
 
 .card:hover {
@@ -48,29 +65,29 @@ li:last-child .card {
 }
 
 .card:hover.bg-red {
-  box-shadow: 0 0 14px #ff4949;
+  box-shadow: 0 0 14px var(--color-red);
 }
 
 .card:hover.bg-yellow {
-  box-shadow: 0 0 14px #ffc92c;
+  box-shadow: 0 0 14px var(--color-yellow);
 }
 
 .card:hover.bg-blue {
-  box-shadow: 0 0 14px #0066ff;
+  box-shadow: 0 0 14px var(--color-blue);
 }
 
 .bg-red {
-  background-color: #ff4949;
+  background-color: var(--color-red);
   background-image: url("./images/mario_bg.png");
 }
 
 .bg-yellow {
-  background-color: #ffc92c;
+  background-color: var(--color-yellow);
   background-image: url("./images/donkeykong_bg.png");
 }
 
 .bg-blue {
-  background-color: #0066ff;
+  background-color: var(--color-blue);
   background-image: url("./images/sonic_bg.png");
 }
 
@@ -89,8 +106,8 @@ li:last-child .card {
 }
 
 .character-name {
-  color: #fff;
-  font-size: 15px;
+  color: var(--color-white);
+  font-size: 1.4rem;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -150,15 +167,6 @@ li:last-child .card {
   }
 
   .card:hover .character-name {
-    font-size: 28px;
-  }
-}
-
-@keyframes move {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -200px 200px;
+    font-size: 2.8rem;
   }
 }
