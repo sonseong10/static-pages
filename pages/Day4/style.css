@@ -5,7 +5,7 @@
   --color-white: #fff;
 
   --color-blue: #129efc;
-  --color-blue-light: rgba(#129efc, 0.1);
+  --color-blue-light: rgba(19, 160, 254, 0.1);
   --color-blue-dark: #0070bb;
 
   --color-bg: linear-gradient(259.16deg, #13a0fe 0%, #0e9af7 78.08%);
@@ -204,4 +204,28 @@ header .container {
 
 .download-area a:first-child {
   margin-right: 40px;
+}
+
+/* sponsor */
+.sponsor {
+  background-color: var(--color-blue-light);
+}
+
+.sponsor-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 28px 0;
+  max-width: 915px;
+}
+
+.sponsor-item a {
+  display: block;
+}
+
+.sponsor-item a img {
+  display: block;
+  width: 154px;
+  height: auto;
 }
