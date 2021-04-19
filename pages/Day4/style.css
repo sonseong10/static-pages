@@ -407,15 +407,12 @@ header .container {
   background-color: var(--color-blue);
 }
 
-footer .container {
-  height: 412px;
-  padding: 104px 58px 58px;
-}
-
 .fnb-list {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 104px 58px 58px;
+  height: 412px;
 }
 
 .fnb-item-title {
@@ -460,4 +457,28 @@ footer .container {
 .downloads-wrap a:not(:last-child) {
   display: block;
   margin-bottom: 30px;
+}
+
+/* low */
+.low {
+  background-color: var(--color-navy);
+}
+
+.low-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 58px;
+}
+
+.low-left {
+  font-size: var(--font-sm);
+}
+
+.low-right {
+  font-size: var(--font-micro);
+}
+
+.low-right a:not(:last-child) {
+  margin-right: 50px;
 }
