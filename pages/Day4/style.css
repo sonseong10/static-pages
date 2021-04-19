@@ -401,3 +401,63 @@ header .container {
   left: 22px;
   bottom: 9px;
 }
+
+/* footer navigation bar */
+.fnb {
+  background-color: var(--color-blue);
+}
+
+footer .container {
+  height: 412px;
+  padding: 104px 58px 58px;
+}
+
+.fnb-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.fnb-item-title {
+  margin-bottom: 30px;
+  font-size: var(--font-base);
+  color: var(--color-white);
+}
+
+.sitemap-item a,
+.social-item a {
+  font-size: var(--font-sm);
+  color: var(--color-white);
+}
+
+.sitemap .sitemap-item:not(:last-child),
+.social .social-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.subscribe-wrap {
+  display: flex;
+}
+
+.subscribe-input {
+  padding: 10px 20px;
+  border: none;
+  width: 245px;
+  background-color: var(--color-white);
+  font-size: var(--font-micro);
+  color: var(--color-black);
+}
+
+.subscribe-button {
+  padding: 10px 25px;
+  border: none;
+  background-color: var(--color-blue-dark);
+  font-size: var(--font-sm);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.downloads-wrap a:not(:last-child) {
+  display: block;
+  margin-bottom: 30px;
+}
