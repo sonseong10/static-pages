@@ -314,6 +314,9 @@ header .container {
   width: 542px;
   height: 361px;
   border-radius: 10px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .decoration-image.first {
@@ -326,4 +329,75 @@ header .container {
 
 .decoration-image.third {
   background-image: url("./images/content-img-03.jpg");
+}
+
+/* promotion */
+.promotion {
+  margin-bottom: 137px;
+}
+
+.promotion .container {
+  max-width: 1091px;
+}
+
+.promotion-title {
+  font-size: var(--font-lg);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.promotion-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.promotion-item {
+  position: relative;
+  width: 345px;
+  height: 436px;
+  padding-top: 76px;
+  font-size: var(--font-mid);
+  text-align: center;
+  color: #fff;
+}
+
+.promotion-item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.promotion-item:first-child {
+  background-color: var(--color-blue);
+}
+
+.promotion-item:nth-child(2) {
+  background-color: var(--color-red);
+}
+
+.promotion-item:last-child {
+  background-color: var(--color-green);
+}
+
+.promotion-desc .decoration {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.promotion-image {
+  position: absolute;
+}
+
+.promotion-item:first-child img {
+  left: 0;
+  bottom: 0;
+}
+
+.promotion-item:nth-child(2) img {
+  left: 22px;
+  bottom: 0;
+}
+
+.promotion-item:last-child img {
+  left: 22px;
+  bottom: 9px;
 }
